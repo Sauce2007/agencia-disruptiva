@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INSIGHT LAB — Agencia Disruptiva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1: #071021;
+      --bg-2: #0b1520;
+      --card: #0f1720;
+      --muted:#9fb0c8;
+      --text:#e6eef8;
+      --accent:#ff7a59;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(2,8,20,0.6);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, Arial, sans-serif;
+      background: linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .wrap{max-width:1150px;margin:32px auto;padding:0 20px}
+    header.top{
+      display:flex;align-items:center;gap:18px;justify-content:space-between;
+      background: linear-gradient(90deg,#0f2335 0%, rgba(15,23,32,0.6) 100%);
+      padding:22px;border-radius:12px;
+      box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.02);
+    }
+    .brand{
+      display:flex;gap:14px;align-items:center;
+    }
+    .badge{
+      width:62px;height:62px;border-radius:12px;
+      background:linear-gradient(135deg,var(--accent),#ffb86b);
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#071021;font-size:20px;
+      box-shadow: 0 8px 30px rgba(255,120,90,0.08);
+    }
+    .brand h1{margin:0;font-size:1.2rem}
+    .brand p{margin:0;color:var(--muted);font-size:0.9rem}
+
+    nav.topnav{display:flex;gap:10px;flex-wrap:wrap}
+    nav.topnav a{
+      color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:600;
+      background:transparent;border:1px solid rgba(255,255,255,0.02);
+    }
+    nav.topnav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:24px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)
+    }
+
+    h2{color:var(--accent);margin:0 0 12px 0}
+    h3{margin:0 0 8px 0;color:var(--text)}
+    .lead-strong{color:var(--text);font-weight:600}
+    .muted{color:var(--muted)}
+    .small{font-size:0.9rem;color:var(--muted)}
+
+    .values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media(max-width:700px){ .values{grid-template-columns:1fr} }
+    .value{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border-radius:10px;padding:14px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .value h4{margin:0 0 6px 0;color:var(--accent);font-size:1rem}
+    .value p{margin:0;color:var(--muted);font-size:0.95rem}
+
+    .img-placeholder{
+      width:100%;height:200px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px dashed rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:var(--muted);
+    }
+
+    footer{margin:26px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    .fade-up{opacity:0;transform:translateY(8px);animation:fadeUp .7s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <!-- HEADER -->
+    <header class="top fade-up">
+      <div class="brand">
+        <div class="badge">IL</div>
+        <div>
+          <h1>INSIGHT LAB</hh1>
+          <p class="lead">La agencia que entiende a los consumidores mejor que las demás.</p>
+        </div>
+      </div>
+
+      <nav class="topnav">
+        <a href="#vision">Visión</a>
+        <a href="#mision">Misión</a>
+        <a href="#valores">Valores</a>
+        <a href="#insight">Insight Lab</a>
+        <a href="#servicio">Servicio Estrella</a>
+        <a href="#ia">Registro IA</a>
+      </nav>
+    </header>
+
+    <!-- VISIÓN -->
+    <section id="vision" class="card fade-up" style="margin-top:20px">
+      <h2>Visión</h2>
+      <p class="lead-strong">Ser la agencia que transforma a las pequeñas y medianas marcas...</p>
+    </section>
+
+    <!-- MISIÓN -->
+    <section id="mision" class="card fade-up">
+      <h2>Misión</h2>
+      <p class="lead-strong">Empoderar a las pymes y negocios locales con estrategias accesibles...</p>
+    </section>
+
+    <!-- VALORES -->
+    <section id="valores" class="card fade-up">
+      <h2>Valores</h2>
+      <div class="values">
+        <div class="value"><h4>Cercanía</h4><p>Entendemos la realidad del negocio pequeño…</p></div>
+        <div class="value"><h4>Honestidad</h4><p>Relaciones transparentes…</p></div>
+        <div class="value"><h4>Accesibilidad</h4><p>Estrategias profesionales a precios justos…</p></div>
+        <div class="value"><h4>Creatividad Responsable</h4><p>Cada idea tiene un propósito…</p></div>
+        <div class="value"><h4>Simplicidad</h4><p>Marketing fácil de entender…</p></div>
+        <div class="value"><h4>Comunidad</h4><p>Impulsamos a los negocios locales…</p></div>
+        <div class="value"><h4>Coherencia</h4><p>Todo tiene sentido…</p></div>
+      </div>
+    </section>
+
+    <!-- INSIGHT LAB -->
+    <section id="insight" class="card fade-up">
+      <h2>AGENCIA DISRUPTIVA: INSIGHT LAB</h2>
+      <p class="kicker">La agencia que entiende a los consumidores mejor que las demás.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 300px;gap:18px">
+        <div>
+          <h3>1. Problema real</h3>
+          <p class="muted">Las agencias crean contenido pero no entienden emociones...</p>
+
+          <h3 style="margin-top:14px">2. Hueco en el mercado</h3>
+          <p class="muted">No existe una agencia que combine emociones + datos + IA...</p>
+
+          <h3 style="margin-top:14px">3. ¿Qué es INSIGHT LAB?</h3>
+          <p class="muted">Agencia basada en neuromarketing + IA + análisis emocional...</p>
+
+          <h3 style="margin-top:14px">4. Por qué es disruptiva</h3>
+          <ul class="muted">
+            <li>Ciencia + creatividad.</li>
+            <li>Mide emociones y no solo likes.</li>
+            <li>Basada en comportamiento humano.</li>
+          </ul>
+        </div>
+
+        <aside>
+
+          <div style="margin-top:14px;padding:12px;border-radius:10px;background:var(--glass)">
+            <p class="small">Público objetivo</p>
+            <p class="lead-strong">Marcas que sienten que sus campañas no conectan.</p>
+          </div>
+
+          <div style="margin-top:12px;padding:12px;border-radius:10px;background:linear-gradient(90deg, rgba(255,120,90,0.06), rgba(255,184,107,0.03))">
+            <p class="small">Slogan</p>
+            <p class="lead-strong">“Si lo sienten, funciona.”</p>
+          </div>
+
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICIO ESTRELLA -->
+    <section id="servicio" class="card fade-up">
+      <h2>Servicio estrella</h2>
+
+      <p class="lead-strong">Marketing emocional + datos con IA / Campañas basadas en comportamiento humano</p>
+
+      <p class="muted">
+        El servicio estrella de Insight Lab es la creación de campañas integrales basadas en
+        neuromarketing, análisis emocional, comportamiento del consumidor, IA y creatividad estratégica.
+      </p>
+
+      <h3 style="margin-top:14px">Este servicio combina:</h3>
+      <ul class="muted">
+        <li>Comprender cómo piensa y siente el consumidor (más allá de datos superficiales).</li>
+        <li>Usar IA para predecir impacto, medir resultados y optimizar campañas.</li>
+        <li>Crear contenido, copies y mensajes basados en ciencia del comportamiento.</li>
+        <li>Generar branding + contenido + performance en un solo paquete integral.</li>
+      </ul>
+
+      <p class="muted" style="margin-top:14px">
+        Este servicio estrella — que llamamos <strong>“Marketing basada en neuro-datos / Emotional Branding + AI & performance”</strong> —
+        separa a Insight Lab de las agencias tradicionales que solo hacen “contenido bonito”.
+      </p>
+    </section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Organigrama</title>
+
+<style>
+    body {
+        background: linear-gradient(to right, #2a1c0c, #d9a12b);
+        font-family: Arial, sans-serif;
+        padding: 40px;
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .box {
+        background: #c47a61;
+        padding: 20px;
+        width: 600px;
+        margin: 20px auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    .box strong {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .line {
+        width: 4px;
+        height: 40px;
+        background: white;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .small-box {
+        background: #d49a85;
+        padding: 18px;
+        width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        text-align: left;
+        font-size: 15px;
+        color: white;
+    }
+
+    .small-box strong {
+        font-size: 18px;
+        margin-bottom: 3px;
+        display: block;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>organigrama</h1>
+
+<!-- DIRECCIÓN GENERAL -->
+<div class="box">
+    <strong>DIRECCIÓN GENERAL</strong>
+</div>
+
+<div class="line"></div>
+
+<!-- DESCRIPCIÓN DE DIRECCIÓN -->
+<div class="box" style="width: 550px;">
+    Encargada de la visión estratégica global de la agencia. Define lineamientos, tipo de clientes,
+    posicionamiento y supervisa calidad, marca y misión.
+</div>
+
+<div class="line"></div>
+
+<!-- PRIMERA FILA DE DEPARTAMENTOS -->
+<div class="row">
+
+    <div class="small-box">
+        <strong>Departamento de Diseño</strong>
+        Responsable de todo lo visual: diseño gráfico, identidad visual y piezas creativas.
+        Traduce la estrategia en elementos visuales que persuaden y generan conversión.
+    </div>
+
+    <div class="small-box">
+        <strong>Departamento de Operaciones / Project Management</strong>
+        Gestiona proyectos, coordina equipos, comunica con clientes y controla entregas,
+        documentación, tiempos y cronogramas.
+    </div>
+
+</div>
+
+<div class="line"></div>
+
+<!-- SEGUNDA FILA -->
+<div class="row">
+
+    <div class="small-box">
+        <strong>Departamento de Desarrollo Web</strong>
+        Construye sitios web rápidos, modernos y funcionales. Garantiza velocidad,
+        experiencia de usuario óptima y conversión.
+    </div>
+
+    <div class="small-box">
+        <strong>Departamento de IA & Data / Analytics & Automation</strong>
+        Administra algoritmos, analítica de datos, automatizaciones y dashboards.
+        Genera insights y optimizaciones para toda la agencia.
+    </div>
+
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Justificación</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 40px;
+        background: linear-gradient(to right, #1a120b, #c89525);
+        font-family: Arial, sans-serif;
+        color: white;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 48px;
+        margin-bottom: 50px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .content {
+        width: 70%;
+        margin: auto;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+
+    .content p {
+        margin-bottom: 25px;
+    }
+
+    .title {
+        font-weight: bold;
+        font-size: 23px;
+        margin-bottom: 3px;
+        display: block;
+    }
+</style>
+
+</head>
+<body>
+
+<h1>JUSTIFICACIÓN</h1>
+
+<div class="content">
+
+    <p>
+        <span class="title">Dirección General:</span>
+        Define la visión, rumbo, tipo de clientes y estándares de calidad de la agencia.
+    </p>
+
+    <p>
+        <span class="title">Diseño:</span>
+        Convierte la estrategia en elementos visuales que comunican, persuaden y generan identidad.
+    </p>
+
+    <p>
+        <span class="title">Desarrollo Web:</span>
+        Crea sitios y landings rápidas, modernas y optimizadas para lograr conversiones.
+    </p>
+
+    <p>
+        <span class="title">Marketing / Performance:</span>
+        Ejecuta campañas, analiza métricas y optimiza constantemente para mejorar resultados.
+    </p>
+
+    <p>
+        <span class="title">IA & Data:</span>
+        Analiza datos, automatiza procesos, optimiza funnels y genera insights para decisiones más inteligentes.
+    </p>
+
+    <p>
+        <span class="title">Operaciones / Project Management:</span>
+        Coordina equipos, gestiona proyectos y clientes, organiza tiempos y asegura el correcto flujo de trabajo.
+    </p>
+
+</div>
+
+</body>
+</html>
+
+   
+      
+
+    </section>
+
+    <!-- REGISTRO IA -->
+    <section id="ia" class="card fade-up">
+      <h2>Registro de IA</h2>
+      <p class="small">Guarda todas tus interacciones con IA aquí.</p>
+
+      <label>Prompts usados</label>
+      <textarea id="ia_prompt"></textarea>
+
+      <label>Qué generó la IA</label>
+      <textarea id="ia_salida"></textarea>
+
+      <label>¿Editaste el resultado?</label>
+      <select id="ia_edito">
+        <option value="sí">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <button class="btn" id="saveIA">Guardar registro</button>
+      <p id="iaMsg" class="small muted" style="margin-top:10px"></p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> INSIGHT LAB — Agencia Disruptiva.
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('saveIA').addEventListener('click', () => {
+      const prompt = ia_prompt.value.trim();
+      const salida = ia_salida.value.trim();
+      const edito = ia_edito.value;
+      const msg = iaMsg;
+
+      if(!prompt && !salida){
+        msg.textContent = 'Rellena al menos prompts o salidas.';
+        return;
+      }
+
+      const registro = { fecha:new Date().toISOString(), prompt, salida, edito };
+      const registros = JSON.parse(localStorage.getItem('insight_registro_ia') || '[]');
+      registros.push(registro);
+      localStorage.setItem('insight_registro_ia', JSON.stringify(registros));
+
+      msg.textContent = 'Registro guardado.';
+      setTimeout(()=> msg.textContent='', 3000);
+    });
+  </script>
+</body>
+</html>
